@@ -1,0 +1,25 @@
+.turn(@duration: 1s) {
+  animation: turn unit(@duration, s) linear infinite;
+}
+
+.orbit(@duration: 1s) {
+  animation: orbit unit(@duration, s) linear infinite;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(100%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100%) rotate(-360deg);
+  }
+}

@@ -1,0 +1,188 @@
+@import '@mixin/animations.less';
+
+.planet,
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet img,
+.comet img {
+  transition: scale 0.5s;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet img {
+  .turn(50);
+}
+
+.orbit {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.mercury {
+  .orbit(30);
+  width: 100px;
+  height: 100px;
+}
+
+.mercury img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+
+.mercuryOrbit {
+  width: 200px;
+  height: 200px;
+}
+
+.venus {
+  .orbit(40);
+  width: 150px;
+  height: 150px;
+}
+
+.venus img,
+.earth img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -20px;
+  left: -20px;
+}
+
+.venusOrbit {
+  width: 300px;
+  height: 300px;
+}
+
+.earth {
+  .orbit(60);
+  width: 200px;
+  height: 200px;
+}
+
+.earthOrbit {
+  width: 400px;
+  height: 400px;
+}
+
+.mars {
+  .orbit(70);
+  width: 250px;
+  height: 250px;
+
+  & img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -15px;
+    left: -15px;
+  }
+}
+
+.marsOrbit {
+  width: 500px;
+  height: 500px;
+}
+
+
+.jupiter {
+  .orbit(100);
+  width: 350px;
+  height: 350px;
+}
+
+.jupiter img {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: -35px;
+  left: -35px;
+}
+
+.jupiterOrbit {
+  width: 700px;
+  height: 700px;
+}
+
+.saturn {
+  .orbit(130);
+  width: 420px;
+  height: 420px;
+}
+
+.saturn img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -25px;
+  left: -25px;
+}
+
+.saturnOrbit {
+  width: 840px;
+  height: 840px;
+}
+
+.uranus {
+  .orbit(160);
+  width: 480px;
+  height: 480px;
+}
+
+.uranus img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -25px;
+  left: -25px;
+}
+
+.uranusOrbit {
+  width: 960px;
+  height: 960px;
+}
+
+.neptune {
+  .orbit(190);
+  width: 530px;
+  height: 530px;
+}
+
+.neptune img {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  top: -22px;
+  left: -22px;
+}
+
+.neptuneOrbit {
+  width: 1060px;
+  height: 1060px;
+}
+
+
+.paused .planet,
+.paused .orbit {
+  animation-play-state: paused;
+}
+
+.planet .selected {
+  border-radius: 50%;
+  box-shadow: 0 0 10px 4px rgba(1, 222, 28, 1);
+  scale: 200%;
+}

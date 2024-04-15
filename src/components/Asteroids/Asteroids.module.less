@@ -1,0 +1,47 @@
+@import '@mixin/animations.less';
+
+.asteroids {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -15px;
+    left: -15px;
+    transition: scale 0.5s;
+  }
+}
+
+.paused .asteroids {
+  animation-play-state: paused;
+}
+
+.asteroid1 {
+  .orbit(45);
+}
+
+.asteroid2 {
+  .orbit(30);
+}
+
+.asteroid3 {
+  .orbit(10);
+}
+
+.asteroid4 {
+  .orbit(50);
+}
+
+.asteroid5 {
+  .orbit(20);
+}
+
+.asteroid6 {
+  .orbit(35);
+}
