@@ -1,30 +1,35 @@
 @import '@mixin/animations.less';
 
-.planet,
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &.paused {
+    animation-play-state: paused;
+  }
+
+  & img {
+    .turn(50);
+    border-radius: 50%;
+    transition: scale 0.5s;
+
+    &.selected {
+      box-shadow: 0 0 10px 4px rgba(1, 222, 28, 1);
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px 4px rgba(1, 222, 28, 1);
+    }
+  }
+}
+
 .orbit {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.planet img,
-.comet img {
-  transition: scale 0.5s;
-}
-
-.orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.planet img {
-  .turn(50);
-}
-
-.orbit {
   border: 1px dashed rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
@@ -33,14 +38,18 @@
   .orbit(30);
   width: 100px;
   height: 100px;
-}
 
-.mercury img {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: -10px;
-  left: -10px;
+  & img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+
+    &.selected {
+      scale: 300%;
+    }
+  }
 }
 
 .mercuryOrbit {
@@ -52,15 +61,18 @@
   .orbit(40);
   width: 150px;
   height: 150px;
-}
 
-.venus img,
-.earth img {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  top: -20px;
-  left: -20px;
+  & img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+
+    &.selected {
+      scale: 200%;
+    }
+  }
 }
 
 .venusOrbit {
@@ -72,6 +84,18 @@
   .orbit(60);
   width: 200px;
   height: 200px;
+
+  & img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+
+    &.selected {
+      scale: 200%;
+    }
+  }
 }
 
 .earthOrbit {
@@ -90,6 +114,10 @@
     position: relative;
     top: -15px;
     left: -15px;
+
+    &.selected {
+      scale: 200%;
+    }
   }
 }
 
@@ -103,14 +131,18 @@
   .orbit(100);
   width: 350px;
   height: 350px;
-}
 
-.jupiter img {
-  width: 70px;
-  height: 70px;
-  position: relative;
-  top: -35px;
-  left: -35px;
+  & img {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: -35px;
+    left: -35px;
+
+    &.selected {
+      scale: 120%;
+    }
+  }
 }
 
 .jupiterOrbit {
@@ -122,14 +154,18 @@
   .orbit(130);
   width: 420px;
   height: 420px;
-}
 
-.saturn img {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: -25px;
-  left: -25px;
+  & img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -25px;
+    left: -25px;
+
+    &.selected {
+      scale: 150%;
+    }
+  }
 }
 
 .saturnOrbit {
@@ -141,14 +177,18 @@
   .orbit(160);
   width: 480px;
   height: 480px;
-}
 
-.uranus img {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: -25px;
-  left: -25px;
+  & img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -25px;
+    left: -25px;
+
+    &.selected {
+      scale: 150%;
+    }
+  }
 }
 
 .uranusOrbit {
@@ -160,14 +200,18 @@
   .orbit(190);
   width: 530px;
   height: 530px;
-}
 
-.neptune img {
-  width: 44px;
-  height: 44px;
-  position: relative;
-  top: -22px;
-  left: -22px;
+  & img {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    top: -22px;
+    left: -22px;
+
+    &.selected {
+      scale: 150%;
+    }
+  }
 }
 
 .neptuneOrbit {
@@ -175,14 +219,3 @@
   height: 1060px;
 }
 
-
-.paused .planet,
-.paused .orbit {
-  animation-play-state: paused;
-}
-
-.planet .selected {
-  border-radius: 50%;
-  box-shadow: 0 0 10px 4px rgba(1, 222, 28, 1);
-  scale: 200%;
-}

@@ -1,0 +1,64 @@
+.close {
+  display: none;
+}
+
+.introContainer {
+  width: 600px;
+  height: 500px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+
+  font-size: 24px;
+  z-index: 9;
+}
+
+.instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  animation: blink 3s infinite;
+
+  & img {
+    width: 100px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9;
+  opacity: 1;
+  animation: fromDark 15s ease-in-out forwards;
+}
+
+@keyframes fromDark {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

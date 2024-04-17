@@ -1,20 +1,29 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { LegacyRef } from 'react';
 
 import { PLANET_SVG } from '../../config/solarObjects';
-import { EPlanet } from '../../enums/planet.enum';
+import { ESolarSystemObject } from '../../enums/object.enum';
+import useIsSelected from '../../hooks/useIsSelected';
 import st from './Planet.module.less';
 
 interface IProps {
-  planet: EPlanet;
+  planet: ESolarSystemObject;
+  planetRef?: LegacyRef<HTMLImageElement>;
 }
 
-const Planet = ({ planet }: IProps) => {
+const Planet = ({ planet, planetRef }: IProps) => {
+  const { isSelected, hasSelected } = useIsSelected(planet);
+
   return (
     <>
       <div className={classNames(st.orbit, st[planet + 'Orbit'])}></div>
-      <div className={classNames(st.planet, st[planet])}>
-        <img src={PLANET_SVG[planet]} alt={planet} />
+      <div className={classNames(st.planet, st[planet], { [st.paused]: hasSelected })}>
+        <img
+          className={classNames({ [st.selected]: isSelected })}
+          src={PLANET_SVG[planet]}
+          alt={planet}
+          ref={planetRef}
+        />
       </div>
     </>
   );

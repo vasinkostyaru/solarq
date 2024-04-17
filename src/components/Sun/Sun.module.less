@@ -6,15 +6,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100px;
-}
 
-.sun img {
-  .turn(50);
-  transition: scale 0.5s;
-}
+  img {
+    .turn(50);
+    transition: scale 0.5s;
 
-.sun .selected {
-  transition: scale 0.5s;
-  filter: drop-shadow(0 0 25px rgba(1, 222, 28, 1));
-  scale: 120%;
+    &.selected {
+      transition: scale 0.5s;
+      filter: drop-shadow(0 0 25px rgba(1, 222, 28, 1));
+      scale: 120%;
+    }
+  }
+
 }

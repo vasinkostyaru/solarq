@@ -1,7 +1,7 @@
 .rocket {
   position: absolute;
   top: 500px;
-  left: 1000px;
+  right: 1000px;
   transition: left 0.3s, top 0.3s, transform 0.3s;
   animation: float 2s infinite ease-in-out;
 }
@@ -9,6 +9,9 @@
 .rocket img {
   width: 50px;
   height: 50px;
+  filter: drop-shadow(0 0 5px rgba(1, 222, 28, 1));
+  animation: pulp 2s infinite ease-in-out;
+
 }
 
 @keyframes float {
@@ -20,5 +23,17 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes pulp {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(1, 222, 28, 1));
+  }
+  50% {
+    filter: none;
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(1, 222, 28, 1));
   }
 }

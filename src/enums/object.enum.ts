@@ -1,4 +1,5 @@
-export enum EPlanet {
+export enum ESolarSystemObject {
+  SUN = 'sun',
   MERCURY = 'mercury',
   VENUS = 'venus',
   EARTH = 'earth',
@@ -7,4 +8,6 @@ export enum EPlanet {
   SATURN = 'saturn',
   URANUS = 'uranus',
   NEPTUNE = 'neptune',
+  ASTEROID = 'asteroid',
+  COMET = 'comet',
 }

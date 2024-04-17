@@ -8,6 +8,10 @@
   width: 300px;
   height: 300px;
 
+  &.paused {
+    animation-play-state: paused;
+  }
+
   img {
     width: 30px;
     height: 30px;
@@ -15,11 +19,13 @@
     top: -15px;
     left: -15px;
     transition: scale 0.5s;
-  }
-}
 
-.paused .asteroids {
-  animation-play-state: paused;
+    &.selected {
+      transition: scale 0.5s;
+      filter: drop-shadow(2px 0px 6px #01de1c);
+      scale: 175%;
+    }
+  }
 }
 
 .asteroid1 {
@@ -31,17 +37,6 @@
 }
 
 .asteroid3 {
-  .orbit(10);
-}
-
-.asteroid4 {
-  .orbit(50);
-}
-
-.asteroid5 {
   .orbit(20);
 }
 
-.asteroid6 {
-  .orbit(35);
-}

@@ -1,10 +1,15 @@
 import classNames from 'classnames';
+import { RefObject } from 'react';
 
 import rocketSvg from '../../images/rocket.svg';
 import st from './Rocket.module.less';
 import useRocket from './useRocket';
 
-const Rocket = ({ ref: rocketRef = null }) => {
+interface IProps {
+  rocketRef?: RefObject<HTMLDivElement>;
+}
+
+const Rocket = ({ rocketRef }: IProps) => {
   const { position } = useRocket();
 
   return (
