@@ -47,7 +47,12 @@ function SolarModal({ show = false, onClose }: IProps) {
         </Modal.Header>
         <Modal.Body>
           {selectedObject && (
-            <img className={st.img} src={OBJECTS_PNG[selectedObject]} alt="dd" />
+            <img
+              className={st.img}
+              src={OBJECTS_PNG[selectedObject]}
+              alt="dd"
+              loading="lazy"
+            />
           )}
           <p>{smallDescription}</p>
         </Modal.Body>
