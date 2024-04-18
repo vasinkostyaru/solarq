@@ -23,3 +23,5 @@ git commit -m 'deploy'
 git push -f git@github.com:vasinkostyaru/solarq.git main:gh-pages
 
 cd -
+
+# bash deploy.sh - деплой

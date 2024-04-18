@@ -1,6 +1,6 @@
 import { ESolarSystemObject } from '../enums/object.enum';
-import asteroidPng from '../images/asteroid.png';
-import cometPng from '../images/comet.png';
+import asteroidPng from '../images/asteroid.jpg';
+import cometPng from '../images/comet.jpg';
 import earthPng from '../images/earth.png';
 import earthSvg from '../images/earth.svg';
 import jupiterPng from '../images/jupiter.png';
@@ -13,7 +13,7 @@ import neptunePng from '../images/neptune.png';
 import neptuneSvg from '../images/neptune.svg';
 import saturnPng from '../images/saturn.png';
 import saturnSvg from '../images/saturn.svg';
-import sunPng from '../images/sun.png';
+import sunPng from '../images/sun.jpg';
 import uranusPng from '../images/uranus.png';
 import uranusSvg from '../images/uranus.svg';
 import venusPng from '../images/venus.png';
